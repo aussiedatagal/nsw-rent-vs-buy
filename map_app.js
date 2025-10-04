@@ -179,7 +179,6 @@ class HousingCostMap {
         }
         const q3Sales = (data.yearly_third_quartile_sales_000s || 0) * 1000;
         if (q3Sales) {
-        } else {
             data.yearly_third_quartile_weekly_payment = null;
             const q3Loan = Math.max(0, q3Sales - deposit);
             const q3Mortgage = this._calculateMortgage(q3Loan, rate, term, type);
